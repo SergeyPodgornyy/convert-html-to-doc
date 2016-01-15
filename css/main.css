@@ -1,0 +1,23 @@
+body {
+  padding-top: 50px;
+}
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+textarea#plainHTML{
+	width:70%;
+	height:200px;
+	margin: 10px auto;
+	resize:vertical;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+input[type="submit"]{
+	display:block;
+	margin:50px auto;
+}
