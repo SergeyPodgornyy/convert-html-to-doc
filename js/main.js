@@ -13,7 +13,7 @@ $plainHTML.keyup(function(){
 
 $("#target").submit(function( event ) {
   event.preventDefault();
-  alert( "Handler for .submit() called." );
+  // alert( "Handler for .submit() called." );
 
   $("#downloadBtn").remove();
   $('.alert').remove();
@@ -29,6 +29,8 @@ $("#target").submit(function( event ) {
   	console.log("success");
 
 	  $("#target").append($downloadBtn.attr('href', msg));
+
+    alert('File has been created!');
   })
   .fail(function() {
   	console.log("error");
@@ -39,6 +41,3 @@ $("#target").submit(function( event ) {
   });
   
 });
-
-// http://habrahabr.ru/post/138666/
-// http://habrahabr.ru/post/136999/

@@ -16,6 +16,18 @@ preg_match_all('@<img(.*)?src="([^"]+)"@ui', $link, $matches);
 // preg_match_all('@<a(.*)?href="([^"]+)"@ui', $link, $mat);
 // print_r($mat[2]);
 
+$link = preg_replace('@<script(.*)?</script>@ui', "", $link);
+
+preg_match_all('@<link(.*)?href="([^"]+)"@ui', $link, $styles);
+
+foreach($styles[2] as $style){
+	$cont = @file_get_contents($style);
+	if($cont!==false)
+		$link .= "<style>$cont</style>";
+}
+
+// print_r($link);
+
 foreach ($matches[4] as $img) {
 		$img_tmp=$img;
 		$img_tmp_old=$img;
@@ -61,7 +73,6 @@ function generateFilename($length = 8) {
     return $result;
 }
 
-// $filename = "result/test.doc";
 $filename = "result/".generateFilename().".doc";
 CreateDOC($link,$filename);
 
