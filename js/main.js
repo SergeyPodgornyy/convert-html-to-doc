@@ -1,6 +1,6 @@
 var $plainHTML = $("#plainHTML"),
 	$submit = $("input[type='submit'"),
-	$downloadBtn = '<a href="file.pdf" class="btn btn-success" id="downloadBtn" role="button">Download file</a>';
+	$downloadBtn = $('<a href="result/test.doc" class="btn btn-success" id="downloadBtn" role="button">Download file</a>');
 
 $plainHTML.keyup(function(){
 	if($plainHTML.val().length!==0){
@@ -16,23 +16,29 @@ $("#target").submit(function( event ) {
   alert( "Handler for .submit() called." );
 
   $("#downloadBtn").remove();
+  $('.alert').remove();
+
+  var dataToSend = 'plainHTML=' + $plainHTML.val();
 
   $.ajax({
   	url: 'script.php',
   	type: 'POST',
-  	data: $plainHTML.val()
+  	data: dataToSend
   })
   .done(function(msg) {
   	console.log("success");
 
-	$("#target").append($downloadBtn);
+	  $("#target").append($downloadBtn.attr('href', msg));
   })
   .fail(function() {
   	console.log("error");
-  	// $("#target").append($downloadBtn);
+  	$("#target").append('<div class="alert alert-danger" role="alert"><b>Oh snap!</b> Change a few things up and try submitting again.</div>');
   })
   .always(function(msg) {
   	console.log("complete");
   });
   
 });
+
+// http://habrahabr.ru/post/138666/
+// http://habrahabr.ru/post/136999/
