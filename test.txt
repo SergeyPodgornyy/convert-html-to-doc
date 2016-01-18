@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="http://serhiilihus.in.ua/css/main.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<style>p{padding:20px;margin:10px auto;text-align:center;font-family:Arial,Verdana,Tahoma,sans-serif;line-height: 1.5;}a{color:darkred;}</style>
+</head>
+<body>
+	<p style="font-weight:bold;">Hello my friend from PHP</p>
+	<p style="color:red; text-decoration:underline; background-color:yellow">Hello world</p>
+	<script>alert('Looser!');</script><p style="color:green;">Winner</p>
+	<div>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+	<hr>
+	<p>Go to <a href="http://www.google.com.ua">Google</a></p>
+</body>
+</html>

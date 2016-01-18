@@ -2,12 +2,12 @@ body {
   padding-top: 50px;
 }
 
-.starter-template {
+.starter-template { /* main DIV */
   padding: 40px 15px;
   text-align: center;
 }
 
-textarea#plainHTML{
+textarea#plainHTML{ /* textarea box */
 	width:70%;
 	height:200px;
 	margin: 10px auto;
@@ -17,7 +17,7 @@ textarea#plainHTML{
 	-webkit-border-radius: 5px;
 }
 
-input[type="submit"]{
+input[type="submit"]{ /* submit button */
 	display:block;
 	margin:50px auto;
 }
